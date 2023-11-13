@@ -23,6 +23,12 @@ public class CubeShape extends Shape {
     public void editShape() {
         root.setOnMousePressed(mouseEvent -> {
             frontRectangle = new Rectangle();
+            backRectangle = new Rectangle();
+            topperLeftLine = new Line();
+            bottomLeftLine = new Line();
+            topperRightLine = new Line();
+            bottomRightLine = new Line();
+
             frontRectangle.setX(mouseEvent.getX());
             frontRectangle.setY(mouseEvent.getY());
             frontRectangle.setWidth(mouseEvent.getX()-frontRectangle.getX());
@@ -32,7 +38,7 @@ public class CubeShape extends Shape {
             frontRectangle.setFill(null);
 
 
-            backRectangle = new Rectangle();
+
             backRectangle.setX(frontRectangle.getX() + 100);
             backRectangle.setY(frontRectangle.getY() - 100);
             backRectangle.getStrokeDashArray().addAll(25d, 10d);
@@ -40,19 +46,19 @@ public class CubeShape extends Shape {
             backRectangle.setFill(null);
 
 
-            topperLeftLine = new Line();
+
             topperLeftLine.setStroke(Color.RED);
             topperLeftLine.getStrokeDashArray().addAll(25d, 10d);
 
-            bottomLeftLine = new Line();
+
             bottomLeftLine.setStroke(Color.RED);
             bottomLeftLine.getStrokeDashArray().addAll(25d, 10d);
 
-            topperRightLine = new Line();
+
             topperRightLine.setStroke(Color.RED);
             topperRightLine.getStrokeDashArray().addAll(25d, 10d);
 
-            bottomRightLine = new Line();
+
             bottomRightLine.setStroke(Color.RED);
             bottomRightLine.getStrokeDashArray().addAll(25d, 10d);
 

@@ -25,7 +25,7 @@ public class Application extends javafx.application.Application {
         Menu info = new Menu("Довідка");
         menuBar.getMenus().addAll(file, shapes, info);
 
-        Image pointImage = new Image(path+ "point.png");
+        Image pointImage = new Image(path + "point.png");
         Image lineImage = new Image(path + "line.png");
         Image rectImage = new Image(path + "rectangle.png");
         Image ellipseImage = new Image(path + "ellipse.png");
