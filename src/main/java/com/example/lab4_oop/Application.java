@@ -64,62 +64,62 @@ public class Application extends javafx.application.Application {
         borderPane.setLeft(toolBar);
 
         point.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new PointShape(scene, root));
+            MyEditor.start(new PointShape(scene, root));
             stage.setTitle("Крапка");
         });
 
         line.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new LineShape(scene, root));
+            MyEditor.start(new LineShape(scene, root));
             stage.setTitle("Лінія");
         });
 
         rectangle.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new RectangleShape(scene, root));
+            MyEditor.start(new RectangleShape(scene, root));
             stage.setTitle("Прямокутник");
         });
 
         ellipse.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new EllipseShape(scene, root));
+            MyEditor.start(new EllipseShape(scene, root));
             stage.setTitle("Еліпс");
         });
 
         lineWithCircles.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new LineWithCirclesShape(scene, root));
+            MyEditor.start(new LineWithCirclesShape(scene, root));
             stage.setTitle("Лінія з кружечками");
         });
 
         cube.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new CubeShape(scene, root));
+            MyEditor.start(new CubeShape(scene, root));
             stage.setTitle("Куб");
         });
 
         pointButton.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new PointShape(scene, root));
+            MyEditor.start(new PointShape(scene, root));
             stage.setTitle("Крапка");
         });
 
         lineButton.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new LineShape(scene, root));
+            MyEditor.start(new LineShape(scene, root));
             stage.setTitle("Лінія");
         });
 
         rectButton.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new RectangleShape(scene, root));
+            MyEditor.start(new RectangleShape(scene, root));
             stage.setTitle("Прямокутник");
         });
 
         ellipseButton.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new EllipseShape(scene, root));
+            MyEditor.start(new EllipseShape(scene, root));
             stage.setTitle("Еліпс");
         });
 
         lineWithCirclesButton.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new LineWithCirclesShape(scene, root));
+            MyEditor.start(new LineWithCirclesShape(scene, root));
             stage.setTitle("Лінія з кружечками");
         });
 
         cubeButton.setOnAction(actionEvent -> {
-            MyEditor.start(scene, root, new CubeShape(scene, root));
+            MyEditor.start(new CubeShape(scene, root));
             stage.setTitle("Куб");
         });
 
