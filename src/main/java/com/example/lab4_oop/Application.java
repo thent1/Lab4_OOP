@@ -8,6 +8,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) {
@@ -62,62 +64,62 @@ public class Application extends javafx.application.Application {
         borderPane.setLeft(toolBar);
 
         point.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startPointEditor(scene, root);
+            MyEditor.start(scene, root, new PointShape(scene, root));
             stage.setTitle("Крапка");
         });
 
         line.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startLineEditor(scene, root);
+            MyEditor.start(scene, root, new LineShape(scene, root));
             stage.setTitle("Лінія");
         });
 
         rectangle.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startRectEditor(scene, root);
+            MyEditor.start(scene, root, new RectangleShape(scene, root));
             stage.setTitle("Прямокутник");
         });
 
         ellipse.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startEllipseEditor(scene, root);
+            MyEditor.start(scene, root, new EllipseShape(scene, root));
             stage.setTitle("Еліпс");
         });
 
         lineWithCircles.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startLineWithCirclesEditor(scene, root);
+            MyEditor.start(scene, root, new LineWithCirclesShape(scene, root));
             stage.setTitle("Лінія з кружечками");
         });
 
         cube.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startCubeEditor(scene, root);
+            MyEditor.start(scene, root, new CubeShape(scene, root));
             stage.setTitle("Куб");
         });
 
         pointButton.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startPointEditor(scene, root);
+            MyEditor.start(scene, root, new PointShape(scene, root));
             stage.setTitle("Крапка");
         });
 
         lineButton.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startLineEditor(scene, root);
+            MyEditor.start(scene, root, new LineShape(scene, root));
             stage.setTitle("Лінія");
         });
 
         rectButton.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startRectEditor(scene, root);
+            MyEditor.start(scene, root, new RectangleShape(scene, root));
             stage.setTitle("Прямокутник");
         });
 
         ellipseButton.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startEllipseEditor(scene, root);
+            MyEditor.start(scene, root, new EllipseShape(scene, root));
             stage.setTitle("Еліпс");
         });
 
         lineWithCirclesButton.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startLineWithCirclesEditor(scene, root);
+            MyEditor.start(scene, root, new LineWithCirclesShape(scene, root));
             stage.setTitle("Лінія з кружечками");
         });
 
         cubeButton.setOnAction(actionEvent -> {
-            ShapeObjectsEditor.startCubeEditor(scene, root);
+            MyEditor.start(scene, root, new CubeShape(scene, root));
             stage.setTitle("Куб");
         });
 
