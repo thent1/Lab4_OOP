@@ -1,5 +1,7 @@
 package com.example.lab4_oop;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -63,65 +65,53 @@ public class Application extends javafx.application.Application {
         borderPane.setTop(menuBar);
         borderPane.setLeft(toolBar);
 
-        point.setOnAction(actionEvent -> {
+        EventHandler<ActionEvent> pointHandler = event -> {
             MyEditor.start(new PointShape(scene, root));
             stage.setTitle("Крапка");
-        });
+        };
 
-        line.setOnAction(actionEvent -> {
+        point.setOnAction(pointHandler);
+        pointButton.setOnAction(pointHandler);
+
+        EventHandler<ActionEvent> lineHandler = event -> {
             MyEditor.start(new LineShape(scene, root));
             stage.setTitle("Лінія");
-        });
+        };
 
-        rectangle.setOnAction(actionEvent -> {
+        line.setOnAction(lineHandler);
+        lineButton.setOnAction(lineHandler);
+
+        EventHandler<ActionEvent> rectangleHandler = event -> {
             MyEditor.start(new RectangleShape(scene, root));
             stage.setTitle("Прямокутник");
-        });
+        };
 
-        ellipse.setOnAction(actionEvent -> {
+        rectangle.setOnAction(rectangleHandler);
+        rectButton.setOnAction(rectangleHandler);
+
+        EventHandler<ActionEvent> ellipseHandler = event -> {
             MyEditor.start(new EllipseShape(scene, root));
             stage.setTitle("Еліпс");
-        });
+        };
 
-        lineWithCircles.setOnAction(actionEvent -> {
+        ellipse.setOnAction(ellipseHandler);
+        ellipseButton.setOnAction(ellipseHandler);
+
+        EventHandler<ActionEvent> lineOOHandler = event -> {
             MyEditor.start(new LineWithCirclesShape(scene, root));
             stage.setTitle("Лінія з кружечками");
-        });
+        };
 
-        cube.setOnAction(actionEvent -> {
+        lineWithCircles.setOnAction(lineOOHandler);
+        lineWithCirclesButton.setOnAction(lineOOHandler);
+
+        EventHandler<ActionEvent> cubeHandler = event -> {
             MyEditor.start(new CubeShape(scene, root));
             stage.setTitle("Куб");
-        });
+        };
 
-        pointButton.setOnAction(actionEvent -> {
-            MyEditor.start(new PointShape(scene, root));
-            stage.setTitle("Крапка");
-        });
-
-        lineButton.setOnAction(actionEvent -> {
-            MyEditor.start(new LineShape(scene, root));
-            stage.setTitle("Лінія");
-        });
-
-        rectButton.setOnAction(actionEvent -> {
-            MyEditor.start(new RectangleShape(scene, root));
-            stage.setTitle("Прямокутник");
-        });
-
-        ellipseButton.setOnAction(actionEvent -> {
-            MyEditor.start(new EllipseShape(scene, root));
-            stage.setTitle("Еліпс");
-        });
-
-        lineWithCirclesButton.setOnAction(actionEvent -> {
-            MyEditor.start(new LineWithCirclesShape(scene, root));
-            stage.setTitle("Лінія з кружечками");
-        });
-
-        cubeButton.setOnAction(actionEvent -> {
-            MyEditor.start(new CubeShape(scene, root));
-            stage.setTitle("Куб");
-        });
+        cube.setOnAction(cubeHandler);
+        cubeButton.setOnAction(cubeHandler);
 
         stage.setScene(scene);
         stage.show();
