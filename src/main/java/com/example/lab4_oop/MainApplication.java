@@ -1,5 +1,6 @@
 package com.example.lab4_oop;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Orientation;
@@ -10,13 +11,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-
-public class Application extends javafx.application.Application {
+public class MainApplication extends Application {
     @Override
     public void start(Stage stage) {
 
-        String path = "D:\\JavaProjects\\Lab4_OOP\\src\\main\\java\\com\\example\\lab4_oop\\";
+        String path = "D:/JavaProjects/Lab4_OOP/src/main/java/com/example/lab4_oop/";
 
         Pane root = new Pane();
         BorderPane borderPane = new BorderPane();
